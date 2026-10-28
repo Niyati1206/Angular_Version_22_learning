@@ -1,0 +1,10 @@
+<h2>Data types in Signals</h2>
+<p> Spped : {{ speed() }}</p>
+
+<ol>
+    @for(user of users(); track users){
+         <li>{{ user }}</li>
+    }
+</ol>
+
+<button (click)="handleData()">Add data</button>
