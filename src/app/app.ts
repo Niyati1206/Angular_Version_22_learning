@@ -5,9 +5,11 @@ import { VisitorCount } from './visitor-count/visitor-count';
 import { LearningComputedSignals } from './learning-computed-signals/learning-computed-signals';
 import { Effects } from './effects/effects';
 import { TwoWayBinding } from './two-way-binding/two-way-binding';
+import { GetterSetterSignals } from './getter-setter-signals/getter-setter-signals';
 
 @Component({
-  imports: [RouterOutlet, Profile, VisitorCount, LearningComputedSignals, Effects, TwoWayBinding],
+  imports: [RouterOutlet, Profile, VisitorCount, LearningComputedSignals, 
+    Effects, TwoWayBinding, GetterSetterSignals],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
