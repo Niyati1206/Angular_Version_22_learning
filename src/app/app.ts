@@ -4,9 +4,10 @@ import { Profile } from './profile/profile';
 import { VisitorCount } from './visitor-count/visitor-count';
 import { LearningComputedSignals } from './learning-computed-signals/learning-computed-signals';
 import { Effects } from './effects/effects';
+import { TwoWayBinding } from './two-way-binding/two-way-binding';
 
 @Component({
-  imports: [RouterOutlet, Profile, VisitorCount, LearningComputedSignals, Effects],
+  imports: [RouterOutlet, Profile, VisitorCount, LearningComputedSignals, Effects, TwoWayBinding],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

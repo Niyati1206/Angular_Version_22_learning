@@ -2,9 +2,10 @@ import { Component, signal, effect } from '@angular/core';
 import { single } from 'rxjs';
 import { InjectionContextExample } from './injection-context-example/injection-context-example';
 import { DataTypes } from './data-types/data-types';
+import { GetSet } from './get-set/get-set';
 
 @Component({
-  imports: [InjectionContextExample, DataTypes],
+  imports: [InjectionContextExample, DataTypes, GetSet],
   selector: 'app-effects',
   styleUrl: './effects.css',
   templateUrl: './effects.html',
