@@ -6,10 +6,11 @@ import { LearningComputedSignals } from './learning-computed-signals/learning-co
 import { Effects } from './effects/effects';
 import { TwoWayBinding } from './two-way-binding/two-way-binding';
 import { GetterSetterSignals } from './getter-setter-signals/getter-setter-signals';
+import { Parent } from './parent/parent';
 
 @Component({
-  imports: [RouterOutlet, Profile, VisitorCount, LearningComputedSignals, 
-    Effects, TwoWayBinding, GetterSetterSignals],
+  imports: [RouterOutlet, Profile, VisitorCount, LearningComputedSignals,
+    Effects, TwoWayBinding, GetterSetterSignals, Parent],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
