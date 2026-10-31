@@ -11,9 +11,19 @@ export class Parent {
   // username : string ="Niyati Sawant";
   users = signal(['Niyu','Varu','Priya','Prabhakar']);
   newUser = signal('');
+  selectedUserName =signal('');
   AddUser(){
     this.users.update((data)=>([...data,this.newUser()]));
      this.newUser.set(''); //clear the input field once value is added to list
     
+  }
+
+  selectedUser(name:string){
+    this.selectedUserName.set(name);
+  }
+
+  removeUser(name:string){
+    console.log("Delete",name);
+    this.users.update((data)=>data.filter((item)=> item!=name));
   }
 }

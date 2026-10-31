@@ -1,6 +1,12 @@
 <input type="text" [value]="newUser()" (input)="newUser.set($event.target.value)" >
 <button (click)="AddUser()">Add user</button>
 <!-- <app-child-component [userName]="username"></app-child-component> -->
+
+<h3>Selected User : {{ selectedUserName() }}</h3>
  @for(user of users(); track user){
-    <li><app-child-component [userName]="user"></app-child-component></li>
+    <app-child-component 
+    [userName]="user" 
+    (selectedUser)="selectedUser($event)"
+    (removeUser)="removeUser($event)"
+    ></app-child-component>
  }
