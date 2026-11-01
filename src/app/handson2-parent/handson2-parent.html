@@ -1,0 +1,6 @@
+<p>handson2-parent works!</p>
+<app-add-to-cart-component [productName]="productName" (productToCart)="productToCart($event)"></app-add-to-cart-component>
+<h3>Cart :</h3>
+@for(items of cart; track items){
+    <li>{{ items }}</li>
+}

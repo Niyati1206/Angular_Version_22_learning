@@ -1,0 +1,4 @@
+@for(task of taskList; track task){
+    <app-task-item [value]="task"
+    (completed)="taskCompleted($event)"></app-task-item>
+}
