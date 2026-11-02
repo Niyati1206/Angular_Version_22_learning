@@ -1,0 +1,49 @@
+<h1>Hands On Practice</h1>
+<nav class="handson-nav">
+<a  routerLink="/handson" [queryParams]="{id:1}">HandsOn 1</a>
+<a  routerLink="/handson" [queryParams]="{id:2}">HandsOn 2</a>
+<a  routerLink="/handson" [queryParams]="{id:3}">HandsOn 3</a>
+<a  routerLink="/handson" [queryParams]="{id:4}">HandsOn 4</a>
+<a  routerLink="/handson" [queryParams]="{id:5}">HandsOn 5</a>
+<a  routerLink="/handson" [queryParams]="{id:6}">HandsOn 6</a>
+<a  routerLink="/handson" [queryParams]="{id:7}">HandsOn 7</a>
+<a  routerLink="/handson" [queryParams]="{id:8}">HandsOn 8</a>
+<a  routerLink="/handson" [queryParams]="{id:9}">HandsOn 9</a>
+</nav>
+@switch (question) {
+  @case (1) {
+  <app-handson1-parent></app-handson1-parent> 
+  }
+
+  @case (2) {
+<app-handson2-parent></app-handson2-parent> 
+  }
+
+  @case(3){
+<app-handson3-parent></app-handson3-parent> 
+  }
+    @case(4){
+<app-handson4-parent></app-handson4-parent> 
+  }
+    @case(5){
+<app-handson5-parent></app-handson5-parent> 
+  }
+    @case(6){
+<app-handson6-parent></app-handson6-parent> 
+  }
+    @case(7){
+        <app-handson7-parent></app-handson7-parent> 
+  }
+    @case(8){
+<app-handson8-parent></app-handson8-parent> 
+  }
+
+
+  @case (9) {
+    <app-handson9-parent></app-handson9-parent> 
+  }
+
+  @default {
+    <p>Question not found.</p>
+  }
+}

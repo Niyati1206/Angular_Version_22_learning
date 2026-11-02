@@ -1,5 +1,5 @@
 import { Component , effect, signal} from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   imports: [],
   selector: 'app-visitor-count',
@@ -7,7 +7,7 @@ import { Component , effect, signal} from '@angular/core';
   templateUrl: './visitor-count.html',
 })
 export class VisitorCount {
-  constructor(){
+  constructor(public route: Router){
     effect(()=>{
       //console.log(this.count); //iska value hamesha 0 dikhega 
     console.log(this.counter1()); //iska value changes detect hoga and this changed values dikhega
@@ -24,5 +24,8 @@ export class VisitorCount {
   counter1 = signal(0);
   updateSignal(){
     this.counter1.update(counter12 => counter12 +1)
+  }
+  goToProfile(){
+    this.route.navigate(['profile']);
   }
 }
