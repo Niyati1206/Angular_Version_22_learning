@@ -1,0 +1,10 @@
+.card {
+    border: 1px solid black;
+    padding: 15px;
+    background-color: #f5b1c5;
+    width: max-content;
+}
+
+.card p {
+    margin: 0;
+}

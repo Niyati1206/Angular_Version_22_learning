@@ -1,0 +1,144 @@
+Angular Hands-On Drills: Completed Topics
+One section per topic you finished. Each has three levels: Easy (warm-up), Medium (real work), Hard (proves you own it).
+The rules
+1.  Blank editor. Video closed. Notes closed. No AI.
+2.  Stuck for more than 15 minutes? Mark it with a star, move on, and relearn only the starred items at the end.
+3.  Do Easy for everything first. Only then go to Medium, then Hard. Do not skip ahead.
+4.  After each section, write one line in your notes: what you couldn't recall.
+5.  Redo any starred item two days later. That is the revision.
+1. Setup, CLI, Hello World, Folder Structure
+Easy
+• Create a new app with the CLI and run it. Change the page title and the heading text.
+• Generate a component with ng generate component and display it in the root component.
+Medium
+• Without looking, list what each of these does: main.ts, app.config.ts, app.ts (or app.component.ts), angular.json, package.json, tsconfig.json.
+• Generate a component, a service and a pipe using the CLI only. Delete them, then recreate the component by hand without the CLI.
+Hard
+• Draw (on paper) what happens from ng serve to the first component appearing in the browser. Then verify it by adding a console.log in the bootstrap file and the root component constructor.
+• Create a new app, remove the default content, and set up a clean three-component skeleton (header, main, footer) in under 15 minutes.
+2. Interpolation
+Easy
+• Show your name, age and city using {{ }} from class properties.
+Medium
+• Show a computed expression (price x quantity), a ternary (age >= 18 ? 'Adult' : 'Minor'), and a method call result in the template.
+Hard
+• Build a profile card where the full name, initials and a greeting (based on time of day) are all derived using interpolation and class methods. Then explain why calling a method in a template can be a performance concern and how a computed signal fixes it.
+3. Components and Inline Components
+Easy
+• Create a ProfileCard component with its own template and styles. Use it three times on one page.
+Medium
+• Build the same component twice: once with an external template file and once with an inline template and inline styles. Note when you'd choose each.
+Hard
+• Build a mini page out of five small components (navbar, hero, card list, card, footer) where nothing is written in the root component except the component tags. Every component must be standalone and imported correctly.
+4. Events and Click Event
+Easy
+• A button that shows an alert on click. A button that increments a counter.
+Medium
+• A counter with plus, minus and reset. The minus button must not go below zero.
+• Capture keyup on an input and display what's typed live below it.
+Hard
+• Build a keyboard-aware box: show the last key pressed, and clear it on double-click. Use $event and event.target correctly with proper TypeScript types.
+• Build a like/dislike pair of buttons where clicking one disables the other and shows a total score.
+5. Data Types in Angular (TypeScript)
+Easy
+• Declare a string, number, boolean, array and object in a component and display each.
+Medium
+• Define an interface User with five fields (one optional). Create an array of three users and display them.
+• Use a union type ('admin' | 'user' | 'guest') for a role field.
+Hard
+• Create a typed array of products with nested objects (for example category: { id: number; name: string }). Display the product name, category name and a total price using only strictly typed code, with no any.
+6. Property Binding
+Easy
+• Bind an image src, a button disabled and an input placeholder to class properties.
+Medium
+• Toggle a button's disabled state from another button. Bind a CSS class conditionally with [class.active] and a style with [style.color].
+Hard
+• Build a theme switcher: a button toggles light and dark mode, and the whole card's background, text colour and button label update through property, class and style binding. No direct DOM manipulation allowed.
+7. Signals, Types of Signals, Computed, Effect
+Easy
+• Create a signal<number>(0). Display it, and update it with set() and update() from buttons.
+• Create a computed() that doubles it.
+Medium
+• Build a shopping-cart total: a signal array of items, a computed() for subtotal, a computed() for total with tax, and buttons to add and remove items.
+• Write an effect() that logs the counter value every time it changes. Explain in your notes when an effect should and shouldn't be used.
+Hard
+• Build a temperature converter with signal for Celsius and computed() for Fahrenheit and Kelvin. Add an effect() that saves the last value to localStorage and restores it on reload.
+• Without looking, write one paragraph explaining why computed() is read-only and how it differs from effect().
+8. Signals with Different Data Types
+Easy
+• Make signals holding a string, a boolean and an array. Display each.
+Medium
+• A signal holding an array: add an item, remove an item, and clear all, using update() with immutable patterns (spread, filter). Never mutate the array directly.
+Hard
+• A signal holding an object ({ name, age, address: { city } }). Update only the city immutably, show the result, and prove (with a computed() or effect()) that the change was detected. Then show what happens if you mutate directly instead.
+9. Get and Set Values with Input Fields
+Easy
+• An input that shows what you type below it.
+Medium
+• A form with name and email inputs plus a Submit button. On submit, store both values in a signal object and display them.
+Hard
+• Build a live-search box: type in the input, filter a hardcoded array of 20 names as you type (case-insensitive), show a "No results" message when nothing matches, and show the result count.
+10. Control Flow: @if, @else, @for, @switch
+Easy
+• @if a boolean signal toggled by a button.
+• @for over an array of five fruits with track.
+• @switch on a status string showing a different message for each of three cases.
+Medium
+• @if / @else if / @else for a grade calculator (A, B, C, Fail) from a marks input.
+• @for with @empty, and use $index, $first, $last, $odd in the template (for example alternating row colours).
+Hard
+• Build a filterable product table: filter buttons (All, In Stock, Out of Stock) drive a computed() list, rendered with @for and @empty. Each row's badge colour comes from @switch on stock status. Explain in your notes why track matters.
+11. Two-Way Binding
+Easy
+• Use [(ngModel)] on one input and mirror the value below it. (Remember the FormsModule import.)
+Medium
+• Create a small sign-up form (name, email, checkbox, select) with [(ngModel)] on every field, and show a live preview of the data.
+Hard
+• Build the same two-way binding without ngModel: using [value] plus (input). Then rebuild it again using the signal-friendly approach (model() or a signal plus event binding, whichever your Angular version supports). Write two lines on how each approach differs.
+12. Signals Getter and Setter
+Easy
+• A class with a signal, a getter method that returns it, and a setter method that updates it. Use them in a template.
+Medium
+• A UserSettings class holding a signal for theme and one for language, exposing getTheme(), setTheme(), and a read-only public version using asReadonly().
+Hard
+• Build a BankAccount style class with a private balance signal, deposit() and withdraw() methods that block invalid amounts (negative, or more than the balance), and a computed() status of 'Low' | 'Normal' | 'High'. Display everything in a component.
+13. Pass Data: Parent to Child
+Easy
+• Parent passes a name string to a Greeting child. Child displays it.
+Medium
+• Parent holds an array of products and passes one at a time to a ProductCard child through @for. Child displays name, price and a badge.
+• Make one input required and give another a default value.
+Hard
+• Build a Rating child that receives a number and shows that many stars (filled and empty) using @for over a computed array. Reuse it in three different places with different values. Use the signal-based input() API, and write down how it differs from the older @Input() decorator.
+14. Pass Data: Child to Parent
+Easy
+• A child button emits a message. The parent displays it.
+Medium
+• Child component with an input and an Add button. On click, it emits the text to the parent, and the parent adds it to a list.
+Hard
+• Build a parent with a list of items, and a child ItemRow that receives an item and emits a delete event with its id and an edit event with the new text. The parent handles both and updates its signal array immutably. Use the output() API and write down how it differs from @Output() EventEmitter.
+15. Global State with Signals
+Easy
+• Create a service with a signal<number>(0). Inject it into two unrelated components and display the value in both.
+Medium
+• A CounterService with increment(), decrement() and reset(). One component shows the count, another has the buttons. Prove they stay in sync.
+Hard
+• Build a CartService with a private items signal, a public read-only version, addItem(), removeItem(), a computed() total and a computed() item count. Use it from three places: a product list (add), a header badge (count), and a cart page (list and total). Explain in your notes why the signal is private.
+16. Routing, Header Component, 404 and Redirection
+Easy
+• Create three pages (Home, About, Contact) with routes and links between them using routerLink.
+Medium
+• Build a header component with a nav bar, routerLinkActive highlighting the current page, and <router-outlet> in the root component.
+• Add a wildcard route for a 404 page, and a redirect from '' to /home.
+Hard
+• Build a five-page app (Home, Products, About, Contact, 404) with a shared header and footer. The active nav link is highlighted, the 404 page has a "Go home" button that navigates using the Router service in code, and an unknown URL like /xyz/abc lands on the 404 page. Do it all from a fresh ng new project without looking.
+Final boss: combine everything (do this last)
+To-Do app, from a blank project, video closed
+• Add a task with an input and a button. Validate that it's not empty.
+• List tasks with @for, with @empty for no tasks.
+• Mark a task done (strikethrough) and delete a task.
+• Show a computed() count of tasks remaining.
+• Filter All, Active and Done with buttons.
+• Keep tasks in a TodoService signal store, with the list and form as separate components talking through the service.
+• Add a header, routes for Home and Tasks, and a 404 page.
+• Bonus: persist to localStorage with an effect().

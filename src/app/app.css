@@ -1,0 +1,16 @@
+/* .card{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+} */
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+app-footer {
+    display: block;
+    margin-top: auto;
+}

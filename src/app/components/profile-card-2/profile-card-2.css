@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    border: 1px solid black;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    background-color : #f5b1c5;
+
+}
+.container h2 {
+    margin: 0;
+    align-self : center;
+    margin-bottom:10px;
+}

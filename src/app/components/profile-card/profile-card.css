@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    border: 1px solid black;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+
+}
+.container h3 {
+    margin: 0;
+    align-self : center;
+    margin-bottom:10px;
+}
+
+.container ul {
+    margin-top: 5px;
+}
