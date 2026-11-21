@@ -7,11 +7,12 @@ import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
 import { Footer } from './components/footer/footer';
 import { CardList } from './components/card-list/card-list';
+import { ProfileInline } from './components/profile-inline/profile-inline';
 
 
 @Component({ 
   
-  imports: [RouterOutlet , Profile, ProfileCard, ProfileCard2 , Navbar,Hero ,CardList, Footer],
+  imports: [RouterOutlet , Profile, ProfileCard, ProfileCard2 , Navbar,Hero ,CardList, Footer, ProfileInline],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
