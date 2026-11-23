@@ -1,0 +1,16 @@
+<!-- <button (click)="showAlert()">Alert!</button>
+<button (click)="count= count + 1">Increment</button>
+<p>{{ count }}</p> -->
+
+<hr>
+
+<button (click)="increase()">+</button>
+<p>{{count()}}</p>
+<button (click)="decrease()">-</button>
+<br>
+<button (click)="reset()">Reset</button>
+
+<hr>
+
+<input type="text"  (keyup)="message($event)">
+<p>{{typed}}</p>

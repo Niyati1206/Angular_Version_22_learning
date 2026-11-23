@@ -8,11 +8,14 @@ import { Hero } from './components/hero/hero';
 import { Footer } from './components/footer/footer';
 import { CardList } from './components/card-list/card-list';
 import { ProfileInline } from './components/profile-inline/profile-inline';
+import { EventsPractice } from './components/events-practice/events-practice';
 
 
 @Component({ 
   
-  imports: [RouterOutlet , Profile, ProfileCard, ProfileCard2 , Navbar,Hero ,CardList, Footer, ProfileInline],
+  imports: [RouterOutlet, Profile, ProfileCard, ProfileCard2, Navbar, Hero, CardList, Footer, ProfileInline, EventsPractice,
+    EventsPractice
+  ],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
