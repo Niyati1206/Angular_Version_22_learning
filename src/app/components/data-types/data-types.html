@@ -1,0 +1,54 @@
+<!-- <div class="container">
+    <h3>Name :  {{name}}</h3>
+    <p>Age: {{age}}</p>
+    <p>{{message}}</p>
+    <p>Hobbies-</p>
+    <ul>
+    @for(hobby of hobbies;track hobby){
+        <li>{{hobby}}</li>
+    }
+    </ul>
+    <table>
+        <tr>
+          
+            <th>Subject</th>
+            <th>Score</th>
+            
+        </tr>
+      
+        @for(mark of marks;track mark){
+              <tr>
+            <td>
+                {{mark.subject}}
+        </td>
+        <td>
+            {{ mark.score}}
+        </td>
+        </tr>
+        }
+        
+       
+    </table>
+</div> -->
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th> Is Alcoholic ?</th>
+        <th>Contact</th>
+        <th>Role</th>
+
+    </tr>
+    @for(item of users; track item){
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.isAlcoholic}}</td>
+            <td>{{item.contact}}</td>
+            <td>{{item.role}}</td>
+        </tr>
+    }
+</table>

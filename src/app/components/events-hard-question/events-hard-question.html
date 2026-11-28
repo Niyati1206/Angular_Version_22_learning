@@ -1,0 +1,7 @@
+<input type="text" (keydown)="giveLast($event)" (dblclick)="reset()"/>
+<p>{{message()}}</p>
+<hr>
+<br>
+<button (click)="action(true)" [disabled]="isLiked()===true">Like</button>
+<button (click)="action(false)" [disabled]="isLiked()=== false">Dislike</button>
+<p>Score = {{score()}}</p>
